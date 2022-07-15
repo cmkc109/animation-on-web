@@ -1,0 +1,35 @@
+#sass-logo {
+  background: transparent;
+}
+
+.composition {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2rem auto;
+
+  &__photo {
+    width: 25%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    z-index: 5;
+    transition: all 0.2s;
+    outline-offset: 1rem;
+
+    @include respond(tab-port) {
+      float: left;
+      position: relative;
+      width: 33.33333333%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    }
+
+    &:hover {
+      outline: 1rem solid rgba($color: #8ecbee, $alpha: 1);
+      transform: scale(1.05) translateY(-0.2rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 10;
+    }
+  }
+}
